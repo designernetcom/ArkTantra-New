@@ -406,7 +406,7 @@
 }
 
 .button--stroke:hover {
-  color: #000000 !important;
+  color: #fff !important;
 }
 
 .button--stroke::after {
@@ -446,7 +446,7 @@
   left: 0;
   width: 200%;
   aspect-ratio: 1/1;
-  background-color: #fffce1;
+  background-color: #3965ae;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -7450,7 +7450,7 @@ input:focus-visible {
 /* creative team section css end */
 /* ====================== Contact One section start ============================== */
 .blur-bg-white {
-  background: #ffffff;
+  background: #f6f5f3;
   border: 1px solid #ffffff4f;
   backdrop-filter: blur(145px);
 }
@@ -7488,7 +7488,8 @@ input:focus-visible {
 /* ============================= Gallery Section start ================================ */
 .grid-cols-5 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
 }
 
 @media (max-width: 991px) {
@@ -7825,7 +7826,7 @@ input:focus-visible {
 }
 
 .partners-section {
-  /* padding: 80px 0; */
+  padding-bottom: 40px;
   padding-top: 60px;
   background: #000000;
   text-align: center;
@@ -7860,7 +7861,7 @@ input:focus-visible {
 
 /* Image Fit */
 .partner-card img {
-  width: 190px;
+  width: 170px;
   height: auto;
   /* max-width: 100%;
   max-height: 80px; */
@@ -7946,6 +7947,114 @@ h2 {
 }
 .footer {
   background:
-    linear-gradient(rgb(252 182 29 / 79%), rgb(59 92 169 / 83%)),
+    linear-gradient(#000000d6, rgb(62 113 182 / 72%)),
     url(../images/thumbs/banner-two-thumb.png) no-repeat center center / cover;
+}
+.form-div form input {
+  border: 1px solid #3855a5 !important;
+}
+.form-div form select {
+  border: 1px solid #3855a5 !important;
+}
+.contact-div {
+  padding: 50px 0;
+}
+.button__flair:hover {
+  background-color: blue !important;
+}
+.breadcrumb {
+  background: linear-gradient(
+    93.2deg,
+    hsl(35.62deg 94.81% 54.71%) 9.95%,
+    hsl(41.62deg 97.37% 55.29% / 68%)
+  );
+  padding: 50px 0;
+}
+.miniOrange h1 {
+  color: #3e71b6;
+  font-size: 35px;
+}
+.download_btn {
+  background-color: #004a7f;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 20px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+@-webkit-keyframes glowing {
+  0% {
+    background-color: #f9a31c;
+    -webkit-box-shadow: 0 0 3px #f9a31c;
+  }
+  50% {
+    background-color: #f9a31c;
+    -webkit-box-shadow: 0 0 40px #f9a31c;
+  }
+  100% {
+    background-color: #f9a31c;
+    -webkit-box-shadow: 0 0 3px #f9a31c;
+  }
+}
+
+@-moz-keyframes glowing {
+  0% {
+    background-color: #f9a31c;
+    -moz-box-shadow: 0 0 3px #f9a31c;
+  }
+  50% {
+    background-color: #f9a31c;
+    -moz-box-shadow: 0 0 40px #f9a31c;
+  }
+  100% {
+    background-color: #f9a31c;
+    -moz-box-shadow: 0 0 3px #f9a31c;
+  }
+}
+
+@-o-keyframes glowing {
+  0% {
+    background-color: #f9a31c;
+    box-shadow: 0 0 3px #f9a31c;
+  }
+  50% {
+    background-color: #f9a31c;
+    box-shadow: 0 0 40px #f9a31c;
+  }
+  100% {
+    background-color: #f9a31c;
+    box-shadow: 0 0 3px #f9a31c;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-color: #f9a31c;
+    box-shadow: 0 0 3px #f9a31c;
+  }
+  50% {
+    background-color: #f9a31c;
+    box-shadow: 0 0 40px #f9a31c;
+  }
+  100% {
+    background-color: #f9a31c;
+    box-shadow: 0 0 3px #f9a31c;
+  }
+}
+.group-item h5 {
+  text-align: center;
+  font-size: 25px;
+}
+.modal form label {
+  color: black;
 }
