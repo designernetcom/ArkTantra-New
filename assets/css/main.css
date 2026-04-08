@@ -7529,7 +7529,7 @@ input:focus-visible {
 .gradient-green-yellow .btn-main {
   background: linear-gradient(
     93.2deg,
-    hsl(var(--main-two)) 9.95%,
+    hsl(40.44deg 99.13% 55.1%) 9.95%,
     hsl(var(--main)) 49.32%,
     #ffc251 92.62%
   ) !important;
@@ -8055,6 +8055,122 @@ h2 {
   text-align: center;
   font-size: 25px;
 }
-.modal form label {
+
+/* CARD CONTAINER */
+.datasheet-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.datasheet-card:hover {
+  transform: translateY(-8px);
+}
+
+/* IMAGE */
+.datasheet-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* POPUP */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #fff;
+  width: 400px;
+  margin: 5% auto;
+  padding: 25px;
+  border-radius: 10px;
+  position: relative;
+}
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.datasheet {
+  padding-bottom: 50px;
+}
+.datasheet-img {
+  background-size: cover !important;
+  height: 230px !important;
+}
+
+.resources-card-headings {
+  height: 60px;
+  padding: 9px 15px 1px;
+}
+.resources-card h3 {
+  margin: 0 5px;
+  text-decoration: none;
+  padding: 0.5em 0;
+  font-size: 22px;
+}
+.iam-datasheet-img {
+  background-image: url(/assets/images/ark-img/datasheet/access-gateway.webp);
+}
+.ciam-datasheet-img {
+  background-image: url(/assets/images/ark-img/datasheet/ciam-datasheet.webp);
+}
+.sso-datasheet-img {
+  background-image: url(/assets/images/ark-img/datasheet/sso-datasheet.webp);
+}
+.mfa-datasheet-img {
+  background-image: url(/assets/images/ark-img/datasheet/mfa-datasheet.webp);
+}
+.provisioning-datasheet-img {
+  background-image: url(/assets/images/ark-img/datasheet/provisioning-datasheet.webp);
+}
+.access-gateway-datasheet-img {
+  background-image: url(/assets/images/ark-img/datasheet/access-gateway.webp);
+}
+.adaptive-mfa-datasheet-img {
+  background-image: url(/assets/images/ark-img/datasheet/adaptive-mfa.webp);
+}
+.pam-datasheet-img {
+  background-image: url(/assets/images/ark-img/datasheet/pam-datasheet.webp);
+}
+.bigcommerce-datasheet-img {
+  background-image: url(/assets/images/ark-img/datasheet/bigcommerce-datasheet.webp);
+}
+.oracle-datasheet-img {
+  background-image: url(/assets/images/ark-img/datasheet/oracle-sso-datasheet.webp);
+}
+.windows-datasheet-img {
+  background-image: url(/assets/images/ark-img/datasheet/windows-mfa.webp);
+}
+.tacacs-datasheet-img {
+  background-image: url(/assets/images/ark-img/datasheet/tacacs-datasheet.webp);
+}
+.partner-datasheet-img {
+  background-image: url(/assets/images/ark-img/datasheet/partner-program.webp);
+}
+.password-datasheet-img {
+  background-image: url(/assets/images/ark-img/datasheet/password-management-datasheet.webp);
+}
+.datasheet .pt {
+  padding-top: 40px;
+}
+.toggle-mobileMenu i {
   color: black;
+}
+.mobile-menu__menu .nav-menu__item li a {
+  color: blue;
 }
