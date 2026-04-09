@@ -7450,9 +7450,7 @@ input:focus-visible {
 /* creative team section css end */
 /* ====================== Contact One section start ============================== */
 .blur-bg-white {
-  background: #f6f5f3;
-  border: 1px solid #ffffff4f;
-  backdrop-filter: blur(145px);
+  background: #fff;
 }
 
 .end-62-percent {
@@ -7922,7 +7920,7 @@ h2 {
   padding: 80px 0 40px;
 }
 .feature {
-  background: #f6f5f3;
+  background: aliceblue;
   padding: 40px 0;
 }
 .feature-item img {
@@ -7932,10 +7930,10 @@ h2 {
   padding: 50px 0;
 }
 .vision {
-  background-color: #f6f5f3;
+  background-color: aliceblue;
 }
 .contact-one {
-  background-color: #f6f5f3;
+  background-color: aliceblue;
 }
 .nav-pills .nav-link {
   border-radius: var(--bs-nav-pills-border-radius);
@@ -8165,6 +8163,18 @@ h2 {
 .password-datasheet-img {
   background-image: url(../images/ark-img/datasheet/password-management-datasheet.webp);
 }
+.self-service-datasheet-img {
+  background-image: url(../images/ark-img/datasheet/self-service.png);
+}
+.audit-datasheet-img {
+  background-image: url(../images/ark-img/datasheet/audit.png);
+}
+.techowl-datasheet-img {
+  background-image: url(../images/ark-img/datasheet/techowl.png);
+}
+.patch-datasheet-img {
+  background-image: url(../images/ark-img/datasheet/action1.png);
+}
 .datasheet .pt {
   padding-top: 40px;
 }
@@ -8173,4 +8183,18 @@ h2 {
 }
 .mobile-menu__menu .nav-menu__item li a {
   color: blue;
+}
+.hover-gradient-main {
+  background: aliceblue;
+}
+.services-shadow p {
+  text-align: justify;
+}
+.services-shadow h6 {
+  color: #fbba18;
+  font-size: 25px;
+}
+.service-section {
+  padding: 60px 0;
+  background-color: aliceblue;
 }
