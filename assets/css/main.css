@@ -8192,9 +8192,17 @@ h2 {
   background-color: aliceblue;
 }
 .banner {
-  background: url(../images/ark-img/banner.jpeg) no-repeat center center / cover;
+  background: url("../images/ark-img/banner.jpeg") no-repeat center center;
+  background-size: cover;
 }
 
+@media (max-width: 768px) {
+  .banner {
+    height: 43vh;
+    background: url("../images/ark-img/banner.jpeg") no-repeat center center;
+    background-size: cover;
+  }
+}
 /* Even Page Css */
 .coming-soon {
   background: #ffffff;
@@ -8250,10 +8258,4 @@ h2 {
     opacity: 1;
     transform: translateY(0);
   }
-}
-.breadcrumb-banner {
-  background: url("../images/ark-img/banner.jpeg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
