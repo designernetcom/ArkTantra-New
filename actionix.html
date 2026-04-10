@@ -71,7 +71,7 @@
       </button>
 
       <div class="mobile-menu__inner">
-        <a href="" class="mobile-menu__logo">
+        <a href="index.html" class="mobile-menu__logo">
           <img
             src="assets/images/ark-logo/arktantra-main-logo.png"
             alt="Logo"
@@ -84,21 +84,21 @@
           >
             <li class="nav-menu__item activePage">
               <a
-                href=""
+                href="index.html"
                 class="nav-menu__link tw-pe-5 text-heading tw-py-9 fw-medium w-100"
                 >Home</a
               >
             </li>
             <li class="nav-menu__item position-relative">
               <a
-                href="javascript:void(0)"
+                href="about-us.html"
                 class="nav-menu__link tw-pe-5 text-heading tw-py-9 fw-medium w-100"
                 >About</a
               >
             </li>
             <li class="nav-menu__item has-submenu position-relative">
               <a
-                href="javascript:void(0)"
+                href="miniorange.html"
                 class="nav-menu__link tw-pe-5 text-heading tw-py-9 fw-medium w-100"
                 >Vendors/OEM</a
               >
@@ -148,14 +148,14 @@
             </li>
             <li class="nav-menu__item position-relative">
               <a
-                href="javascript:void(0)"
+                href="services.html"
                 class="nav-menu__link tw-pe-5 text-heading tw-py-9 fw-medium w-100"
                 >Services</a
               >
             </li>
             <li class="nav-menu__item">
               <a
-                href=""
+                href="contact.html"
                 class="nav-menu__link text-heading tw-py-9 fw-medium w-100"
                 >Contact</a
               >
@@ -219,7 +219,7 @@
         >
           <!-- Logo Start -->
           <div class="logo">
-            <a href="" class="link">
+            <a href="index.html" class="link">
               <img
                 src="assets/images/ark-logo/arktantra-main-logo.png"
                 alt="Logo"
@@ -251,14 +251,14 @@
               </li>
               <li class="nav-menu__item position-relative">
                 <a
-                  href=""
+                  href="services.html"
                   class="nav-menu__link tw-pe-5 text-heading tw-py-9 fw-medium w-100"
                   >Services</a
                 >
               </li>
               <li class="nav-menu__item has-submenu position-relative">
                 <a
-                  href="javascript:void(0)"
+                  href="miniorange.html"
                   class="nav-menu__link tw-pe-5 text-heading tw-py-9 fw-medium w-100"
                   >Vendors/OEM</a
                 >
@@ -305,6 +305,13 @@
                 </ul>
               </li>
 
+              <li class="nav-menu__item">
+                <a
+                  href="event.html"
+                  class="nav-menu__link text-heading tw-py-9 fw-medium w-100"
+                  >Events</a
+                >
+              </li>
               <li class="nav-menu__item">
                 <a
                   href="contact.html"
@@ -473,8 +480,10 @@
 
           <div class="mb-3">
             <select class="form-control">
-              <option>Self Service Datasheet</option>
-              <option>Active Directory Audit Datasheet</option>
+              <option value="self-service">
+                Actonix Self Service Datasheet
+              </option>
+              <option value="ad-audit">Active Directory Audit</option>
             </select>
           </div>
 
@@ -482,11 +491,14 @@
           <div class="mb-3">
             <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
           </div>
-          <a href="">
-            <button style="background: #f69a17" class="btn btn-primary w-100">
-              Download
-            </button></a
+          <button
+            type="button"
+            onclick="downloadPDF()"
+            style="background: #f69a17"
+            class="btn btn-primary w-100"
           >
+            Download
+          </button>
 
           <p class="mt-2 small">
             <strong>Note:</strong> Please allow popups and redirects before

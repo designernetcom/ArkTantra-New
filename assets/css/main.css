@@ -3658,6 +3658,7 @@ input:focus-visible {
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 3;
+  font-size: 17px;
 }
 
 .line-clamp-4 {
@@ -6766,7 +6767,7 @@ input:focus-visible {
 }
 
 .nav-submenu__item.activePage .nav-submenu__link {
-  color: var(--main-600) !important;
+  color: hsl(213.33deg 51.64% 47.84%) !important;
 }
 
 .nav-submenu__item:hover a {
@@ -7097,7 +7098,7 @@ input:focus-visible {
 
 @media (min-width: 1500px) {
   .banner {
-    padding: 180px 0;
+    padding: 120px 0;
   }
 }
 
@@ -7461,12 +7462,12 @@ input:focus-visible {
 /* =============================== Blog Section css start =============================== */
 .blog-item__content {
   /* padding: 16px 15px 25px; */
-  padding-inline-end: 24px;
+  /* padding-inline-end: 24px; */
   padding-block-end: 0;
   position: relative;
   z-index: 1;
-  margin-block-start: -48px;
-  margin-inline-start: 16px;
+  /* margin-block-start: -48px;
+  margin-inline-start: 16px; */
 }
 
 .blog-item__content::before {
@@ -7894,7 +7895,7 @@ input:focus-visible {
 @media (max-width: 768px) {
   .banner {
     /* padding: 160px 0; */
-    margin-bottom: -170px;
+    /* margin-bottom: -170px; */
   }
 }
 
@@ -7934,6 +7935,7 @@ h2 {
 }
 .contact-one {
   background-color: aliceblue;
+  padding-top: 50px;
 }
 .nav-pills .nav-link {
   border-radius: var(--bs-nav-pills-border-radius);
@@ -8197,4 +8199,66 @@ h2 {
 .service-section {
   padding: 60px 0;
   background-color: aliceblue;
+}
+.banner {
+  background:
+    linear-gradient(#000000d6, rgb(62 113 182 / 72%)),
+    url(../images/background/banner.jpg) no-repeat center center / cover;
+}
+
+/* Even Page Css */
+.coming-soon {
+  background: #ffffff;
+  padding: 100px 20px;
+  text-align: left;
+}
+
+.coming-soon h1 {
+  font-size: 80px;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.event-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+  border-bottom: 3px solid #f69a17;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .coming-soon {
+    padding: 60px 15px;
+  }
+
+  .coming-soon h1 {
+    font-size: 42px;
+  }
+
+  .event-title {
+    font-size: 18px;
+  }
+}
+.coming-soon {
+  background: #fff url("pattern.svg") no-repeat top right;
+  background-size: 200px;
+}
+.coming-soon h1 {
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

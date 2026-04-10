@@ -111,7 +111,7 @@
       function () {
         $(this).siblings().removeClass("active");
         $(this).addClass("active");
-      }
+      },
     );
 
     // Cursor start
@@ -212,7 +212,7 @@
         "success",
         "Success",
         "Form submitted successfully!",
-        "ph-fill ph-check-circle"
+        "ph-fill ph-check-circle",
       );
     });
     // ========================= Form Submit Js End ===================
@@ -231,7 +231,7 @@
       }
     });
     // ========================= Password Show Hide Js End ===========================
-    
+
     // ========================= Search Popup Js Start ===================
     $(".search-popup__button").on("click", function () {
       $(".search-popup").addClass("active");
@@ -244,30 +244,29 @@
     // ========================= Search Popup Js End ===================
 
     // ========================= Sidebar Menu slide Js start ===================
-    $('.sidebar-menu-slide-bar-btn').on('click', function () {
-      $('.sidebar-menu-slide').toggleClass('active');
-      $('.overlay').toggleClass('show-overlay show-allover');
+    $(".sidebar-menu-slide-bar-btn").on("click", function () {
+      $(".sidebar-menu-slide").toggleClass("active");
+      $(".overlay").toggleClass("show-overlay show-allover");
     });
-    $('.sidebar-menu-slide-close, .overlay').on('click', function () {
-      $('.sidebar-menu-slide').removeClass('active');
+    $(".sidebar-menu-slide-close, .overlay").on("click", function () {
+      $(".sidebar-menu-slide").removeClass("active");
       $(".overlay").removeClass("show-overlay show-allover");
     });
     // ========================= Sidebar Menu slide Js End ===================
-    
+
     // ========================= AOS Js Start ===========================
     AOS.init({
       once: false, // animation will trigger every time the element enters the viewport
       offset: -80, // starts animation exactly when element enters viewport
-      anchorPlacement: 'bottom-bottom', // trigger when the bottom of the element hits the bottom of the viewport
+      anchorPlacement: "bottom-bottom", // trigger when the bottom of the element hits the bottom of the viewport
     });
     // ========================= AOS Js End ===========================
 
-
     // // ================================= Brand slider Start =========================
-    var brandSlider = new Swiper('.brand-slider', {
+    var brandSlider = new Swiper(".brand-slider", {
       autoplay: {
         delay: 2000,
-        disableOnInteraction: false
+        disableOnInteraction: false,
       },
       autoplay: true,
       speed: 1500,
@@ -275,28 +274,27 @@
       loop: true,
       slidesPerView: 7,
       breakpoints: {
-          300: {
-              slidesPerView: 2,
-          },
-          575: {
-              slidesPerView: 3,
-          },
-          768: {
-              slidesPerView: 4,
-          },
-          992: {
-              slidesPerView: 5,
-          },
-          1200: {
-              slidesPerView: 6,
-          },
-          1400: {
-              slidesPerView: 7,
-          },
-      }
+        300: {
+          slidesPerView: 2,
+        },
+        575: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 4,
+        },
+        992: {
+          slidesPerView: 5,
+        },
+        1200: {
+          slidesPerView: 6,
+        },
+        1400: {
+          slidesPerView: 7,
+        },
+      },
     });
     // // ================================= Brand slider End =========================
-
 
     // ================================ slider js start ==============================
     var swiper = new Swiper(".swiper-slider-three", {
@@ -347,12 +345,11 @@
     // ========================= Counter Up Js End ===================
 
     // ========================== Add Attribute For Bg Image Js Start ====================
-    $(".background-img").css('background', function () {
-      var bg = ('url(' + $(this).data("background-image") + ')');
+    $(".background-img").css("background", function () {
+      var bg = "url(" + $(this).data("background-image") + ")";
       return bg;
     });
     // ========================== Add Attribute For Bg Image Js End =====================
-
 
     // ====================== Marquee Js Start ========================
     if ($(".marquee_left").length) {
@@ -369,7 +366,7 @@
     }
     // ====================== Marquee Js End ========================
 
-     // ========================= service Tab Js start ===================
+    // ========================= service Tab Js start ===================
     $(document).on("click", ".service-item", function () {
       $(".service-item").removeClass("active");
       $(this).addClass("active");
@@ -405,7 +402,7 @@
 
     // ========================= Active Tab Background animation Js End ===================
 
-      // ========================= Animated Radial Progress Js Start ===================
+    // ========================= Animated Radial Progress Js Start ===================
     function animateProgress() {
       $("svg.radial-progress").each(function () {
         // Check if the element is within the viewport
@@ -433,7 +430,7 @@
     $(window).on("scroll", animateProgress);
     animateProgress(); // Run on page load
     // ========================= Animated Radial Progress Js End ===================
-    
+
     // ========================= Testimonials Slider Js Start ===================
     var testimonialsSlider = new Swiper(".testimonials-slider", {
       autoplay: {
@@ -458,59 +455,56 @@
         shadowScale: 0.94,
       },
     });
-  // ========================= Testimonials Slider Js End ===================
+    // ========================= Testimonials Slider Js End ===================
 
-   // ============== Magnific Popup Js Start =======================
-  $('.gallery-popup').magnificPopup({
-    type: 'image',
-    gallery:{
-      enabled:true
-    }
-  });
-  // ============== Magnific Popup Js End =======================
-    
-  // ================================ Parallax js Start =================================
-  $(".parallax-window").parallax();
-  // ================================ Parallax js End =================================
-      
-  // ========================= magnific Popup Js Start =====================
-  $(".play-button").magnificPopup({
-    type: "iframe",
-    removalDelay: 300,
-    mainClass: "mfp-fade",
-  });
-  // ========================= magnific Popup Js End =====================
-    
-  // ========================= Testimonials Two Js Start =====================
-  var swiper = new Swiper(".testimonials-two-slider", {
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-    speed: 1500,
-    grabCursor: true,
-    loop: true,
-    slidesPerView: 1,
-    effect: "creative",
-    creativeEffect: {
-      prev: {
-        shadow: true,
-        translate: ["-120%", 0, -500],
+    // ============== Magnific Popup Js Start =======================
+    $(".gallery-popup").magnificPopup({
+      type: "image",
+      gallery: {
+        enabled: true,
       },
-      next: {
-        shadow: true,
-        translate: ["120%", 0, -500],
-      },
-    },
-    pagination: {
-      el: ".testimonials-two-pagination",
-      clickable: true,
-    },
-  });
-  // ========================= Testimonials Two Js End =====================
+    });
+    // ============== Magnific Popup Js End =======================
 
-    
-    
+    // ================================ Parallax js Start =================================
+    $(".parallax-window").parallax();
+    // ================================ Parallax js End =================================
+
+    // ========================= magnific Popup Js Start =====================
+    $(".play-button").magnificPopup({
+      type: "iframe",
+      removalDelay: 300,
+      mainClass: "mfp-fade",
+    });
+    // ========================= magnific Popup Js End =====================
+
+    // ========================= Testimonials Two Js Start =====================
+    var swiper = new Swiper(".testimonials-two-slider", {
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      speed: 1500,
+      grabCursor: true,
+      loop: true,
+      slidesPerView: 1,
+      effect: "creative",
+      creativeEffect: {
+        prev: {
+          shadow: true,
+          translate: ["-120%", 0, -500],
+        },
+        next: {
+          shadow: true,
+          translate: ["120%", 0, -500],
+        },
+      },
+      pagination: {
+        el: ".testimonials-two-pagination",
+        clickable: true,
+      },
+    });
+    // ========================= Testimonials Two Js End =====================
   });
   // ==========================================
   //      End Document Ready function
@@ -533,4 +527,45 @@
   // ========================= Header Sticky Js End===================
 })(jQuery);
 
+function downloadPDF() {
+  const select = document.querySelector("select");
+  const selected = select.value;
 
+  const basePath = "/assets/pdf/datasheets/";
+
+  const pdfMap = {
+    "IAM Datasheet": basePath + "IAM-Product-datasheet.pdf",
+    "CIAM Datasheet": basePath + "CIAM-Datasheet.pdf",
+    "SSO Datasheet": basePath + "SSO-Product-Datasheet.pdf",
+    "MFA Datasheet": basePath + "MFA-Product-Datasheet.pdf",
+    "Provisioning Datasheet": basePath + "Provisioning-Product-Datasheet.pdf",
+    "Access Gateway Datasheet": basePath + "access-gateway-datasheet.pdf",
+    "Adaptive MFA Datasheet": basePath + "Adaptive-MFA-Product-Datasheet-1.pdf",
+    "PAM Datasheet": basePath + "PAM-Product-Datasheet.pdf",
+    "BigCommerce Datasheet": basePath + "Bigcommerce-Product-Datasheet-1.pdf",
+    "Oracle SSO Datasheet": basePath + "Oracle-SSO-Product-Datasheet-1.pdf",
+    "Windows MFA Datasheet": basePath + "Windows-MFA-Product-Datasheet.pdf",
+    "TACACS Datasheet": basePath + "TACACS-Product-Datasheet.pdf",
+    "Partner Program Datasheet":
+      basePath + "Partner-Program-Product-Datasheet-1.pdf",
+    "Password Management Datasheet":
+      basePath + "Password-Management-Product-Datasheet-1.pdf",
+    "Active Directory Audit":
+      "/assets/pdf/datasheets/Actionix-Active-Directory-Audit.pdf",
+    "self-service": "/assets/pdf/datasheets/Actonix-Self-Service-Datasheet.pdf",
+    "ad-audit": "/assets/pdf/datasheets/Actionix-Active-Directory-Audit.pdf",
+    patch: "/assets/pdf/datasheets/Action1-Datasheet.pdf",
+    "TechOwl Shield Datasheet": "/assets/pdf/datasheets/Techowl-Datasheet.pdf",
+  };
+
+  const file = pdfMap[selected];
+
+  if (file) {
+    const link = document.createElement("a");
+    link.href = file;
+    link.download = "";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+}
