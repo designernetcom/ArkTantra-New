@@ -7086,19 +7086,10 @@ input:focus-visible {
 
 /* Home One Css End */
 /* Banner Css Start */
-.banner {
-  padding: 160px 0;
-}
 
 @media (min-width: 992px) {
   .banner {
-    padding: 220px 0;
-  }
-}
-
-@media (min-width: 1500px) {
-  .banner {
-    padding: 120px 0;
+    padding: 296px 0;
   }
 }
 
@@ -8201,9 +8192,7 @@ h2 {
   background-color: aliceblue;
 }
 .banner {
-  background:
-    linear-gradient(#000000d6, rgb(62 113 182 / 72%)),
-    url(../images/background/banner.jpg) no-repeat center center / cover;
+  background: url(../images/ark-img/banner.jpeg) no-repeat center center / cover;
 }
 
 /* Even Page Css */
@@ -8261,4 +8250,10 @@ h2 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.breadcrumb-banner {
+  background: url("../images/ark-img/banner.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
