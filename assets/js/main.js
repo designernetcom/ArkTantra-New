@@ -527,11 +527,44 @@
   // ========================= Header Sticky Js End===================
 })(jQuery);
 
+let selectedType = "";
+
+function openPopup(type) {
+  selectedType = type;
+  document.getElementById("popup").style.display = "flex";
+
+  // Auto-select dropdown
+  const select = document.getElementById("datasheetSelect");
+
+  const map = {
+    IAM: "IAM Datasheet",
+    CIAM: "CIAM Datasheet",
+    SSO: "SSO Datasheet",
+    MFA: "MFA Datasheet",
+    Provisioning: "Provisioning Datasheet",
+    "Access-Gateway": "Access Gateway Datasheet",
+    "Adaptive-Mfa": "Adaptive MFA Datasheet",
+    PAM: "PAM Datasheet",
+    Bigcommerce: "BigCommerce Datasheet",
+    Oracle: "Oracle SSO Datasheet",
+    Windows: "Windows MFA Datasheet",
+    TACACS: "TACACS Datasheet",
+    Partner: "Partner Program Datasheet",
+    Password: "Password Management Datasheet",
+  };
+
+  select.value = map[type] || "IAM Datasheet";
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+
 function downloadPDF() {
-  const select = document.querySelector("select");
+  const select = document.getElementById("datasheetSelect");
   const selected = select.value;
 
-  const basePath = "assets/pdf/datasheets/";
+  const basePath = "./assets/pdf/datasheets/";
 
   const pdfMap = {
     "IAM Datasheet": basePath + "IAM-Product-datasheet.pdf",
@@ -550,18 +583,14 @@ function downloadPDF() {
       basePath + "Partner-Program-Product-Datasheet-1.pdf",
     "Password Management Datasheet":
       basePath + "Password-Management-Product-Datasheet-1.pdf",
-    "Active Directory Audit": basePath + "Actionix-Active-Directory-Audit.pdf",
-    "self-service": basePath + "Actonix-Self-Service-Datasheet.pdf",
-    "ad-audit": basePath + "Actionix-Active-Directory-Audit.pdf",
-    patch: basePath + "Action1-Datasheet-1.pdf",
-    "TechOwl Shield Datasheet": basePath + "Techowl-Datasheet.pdf",
   };
 
   const file = pdfMap[selected];
 
   if (file) {
-    window.open(file, "_blank"); // more reliable
+    console.log("Opening:", file);
+    window.open(file, "_blank");
   } else {
-    console.log("File not found for:", selected);
+    alert("File not found!");
   }
 }
