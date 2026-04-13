@@ -527,77 +527,41 @@
   // ========================= Header Sticky Js End===================
 })(jQuery);
 
-// pdf download script
+function downloadPDF() {
+  const select = document.querySelector("select");
+  const selected = select.value;
 
-let selectedType = "";
-
-function openPopup(type) {
-  selectedType = type;
-  document.getElementById("popup").style.display = "flex";
-
-  const select = document.getElementById("datasheetSelect");
-
-  const map = {
-    IAM: "IAM Datasheet",
-    CIAM: "CIAM Datasheet",
-    SSO: "SSO Datasheet",
-    MFA: "MFA Datasheet",
-    Provisioning: "Provisioning Datasheet",
-    "Access-Gateway": "Access Gateway Datasheet",
-    "Adaptive-Mfa": "Adaptive MFA Datasheet",
-    PAM: "PAM Datasheet",
-    Bigcommerce: "BigCommerce Datasheet",
-    Oracle: "Oracle SSO Datasheet",
-    Windows: "Windows MFA Datasheet",
-    TACACS: "TACACS Datasheet",
-    Partner: "Partner Program Datasheet",
-    Password: "Password Management Datasheet",
-  };
-
-  select.value = map[type] || "IAM Datasheet";
-}
-
-function closePopup() {
-  document.getElementById("popup").style.display = "none";
-}
-
-function downloadPDF(type = null) {
   const basePath = "./assets/pdf/datasheets/";
 
   const pdfMap = {
-    IAM: basePath + "IAM-Product-datasheet.pdf",
-    CIAM: basePath + "CIAM-Datasheet.pdf",
-    SSO: basePath + "SSO-Product-Datasheet.pdf",
-    MFA: basePath + "MFA-Product-Datasheet.pdf",
-    Provisioning: basePath + "Provisioning-Product-Datasheet-1.pdf",
-    "Access-Gateway": basePath + "access-gateway-datasheet.pdf",
-    "Adaptive-Mfa": basePath + "Adaptive-MFA-Product-Datasheet-1.pdf",
-    PAM: basePath + "PAM-Product-Datasheet.pdf",
-    Bigcommerce: basePath + "BigCommerce-Product-Datasheet-1.pdf",
-    Oracle: basePath + "Oracle-SSO-Product-Datasheet-1.pdf",
-    Windows: basePath + "Windows-MFA-Product-Datasheet-1.pdf",
-    TACACS: basePath + "TACACS-Product-Datasheet-1.pdf",
-    Partner: basePath + "Partner-Program-Product-Datasheet-1.pdf",
-    Password: basePath + "Password-Management-Product-Datasheet-1.pdf",
+    "IAM Datasheet": basePath + "IAM-Product-datasheet.pdf",
+    "CIAM Datasheet": basePath + "CIAM-Datasheet.pdf",
+    "SSO Datasheet": basePath + "SSO-Product-Datasheet.pdf",
+    "MFA Datasheet": basePath + "MFA-Product-Datasheet.pdf",
+    "Provisioning Datasheet": basePath + "Provisioning-Product-Datasheet-1.pdf",
+    "Access Gateway Datasheet": basePath + "access-gateway-datasheet.pdf",
+    "Adaptive MFA Datasheet": basePath + "Adaptive-MFA-Product-Datasheet-1.pdf",
+    "PAM Datasheet": basePath + "PAM-Product-Datasheet.pdf",
+    "BigCommerce Datasheet": basePath + "BigCommerce-Product-Datasheet-1.pdf",
+    "Oracle SSO Datasheet": basePath + "Oracle-SSO-Product-Datasheet-1.pdf",
+    "Windows MFA Datasheet": basePath + "Windows-MFA-Product-Datasheet-1.pdf",
+    "TACACS Datasheet": basePath + "TACACS-Product-Datasheet-1.pdf",
+    "Partner Program Datasheet":
+      basePath + "Partner-Program-Product-Datasheet-1.pdf",
+    "Password Management Datasheet":
+      basePath + "Password-Management-Product-Datasheet-1.pdf",
+    "Active Directory Audit": basePath + "Actionix-Active-Directory-Audit.pdf",
+    "self-service": basePath + "Actonix-Self-Service-Datasheet.pdf",
+    "ad-audit": basePath + "Actionix-Active-Directory-Audit.pdf",
+    patch: basePath + "Action1-Datasheet-1.pdf",
+    "TechOwl Shield Datasheet": basePath + "Techowl-Datasheet.pdf",
   };
 
-  // 👉 Priority: direct click > popup selection
-  const finalType = type || selectedType;
-
-  const file = pdfMap[finalType];
+  const file = pdfMap[selected];
 
   if (file) {
-    const link = document.createElement("a");
-    link.href = file;
-    link.download = "";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    closePopup(); // optional
+    window.open(file, "_blank"); // more reliable
   } else {
-    alert("File not found!");
+    console.log("File not found for:", selected);
   }
 }
-
-
