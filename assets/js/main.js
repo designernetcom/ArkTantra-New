@@ -531,42 +531,37 @@ function downloadPDF() {
   const select = document.querySelector("select");
   const selected = select.value;
 
-  const basePath = "/assets/pdf/datasheets/";
+  const basePath = "assets/pdf/datasheets/";
 
   const pdfMap = {
     "IAM Datasheet": basePath + "IAM-Product-datasheet.pdf",
     "CIAM Datasheet": basePath + "CIAM-Datasheet.pdf",
     "SSO Datasheet": basePath + "SSO-Product-Datasheet.pdf",
     "MFA Datasheet": basePath + "MFA-Product-Datasheet.pdf",
-    "Provisioning Datasheet":
-      basePath + "Provisioning-Product-Datasheet (1).pdf",
+    "Provisioning Datasheet": basePath + "Provisioning-Product-Datasheet-1.pdf",
     "Access Gateway Datasheet": basePath + "access-gateway-datasheet.pdf",
     "Adaptive MFA Datasheet": basePath + "Adaptive-MFA-Product-Datasheet-1.pdf",
     "PAM Datasheet": basePath + "PAM-Product-Datasheet.pdf",
-    "BigCommerce Datasheet": basePath + "Bigcommerce-Product-Datasheet-1.pdf",
+    "BigCommerce Datasheet": basePath + "BigCommerce-Product-Datasheet-1.pdf",
     "Oracle SSO Datasheet": basePath + "Oracle-SSO-Product-Datasheet-1.pdf",
     "Windows MFA Datasheet": basePath + "Windows-MFA-Product-Datasheet-1.pdf",
-    "TACACS Datasheet": basePath + "TACACS-Product-Datasheet-1 (1).pdf",
+    "TACACS Datasheet": basePath + "TACACS-Product-Datasheet-1.pdf",
     "Partner Program Datasheet":
       basePath + "Partner-Program-Product-Datasheet-1.pdf",
     "Password Management Datasheet":
       basePath + "Password-Management-Product-Datasheet-1.pdf",
-    "Active Directory Audit":
-      "/assets/pdf/datasheets/Actionix-Active-Directory-Audit.pdf",
-    "self-service": "/assets/pdf/datasheets/Actonix-Self-Service-Datasheet.pdf",
-    "ad-audit": "/assets/pdf/datasheets/Actionix-Active-Directory-Audit.pdf",
-    patch: "/assets/pdf/datasheets/Action1-Datasheet-1.pdf",
-    "TechOwl Shield Datasheet": "/assets/pdf/datasheets/Techowl-Datasheet.pdf",
+    "Active Directory Audit": basePath + "Actionix-Active-Directory-Audit.pdf",
+    "self-service": basePath + "Actonix-Self-Service-Datasheet.pdf",
+    "ad-audit": basePath + "Actionix-Active-Directory-Audit.pdf",
+    patch: basePath + "Action1-Datasheet-1.pdf",
+    "TechOwl Shield Datasheet": basePath + "Techowl-Datasheet.pdf",
   };
 
   const file = pdfMap[selected];
 
   if (file) {
-    const link = document.createElement("a");
-    link.href = file;
-    link.download = "";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.open(file, "_blank"); // more reliable
+  } else {
+    console.log("File not found for:", selected);
   }
 }
