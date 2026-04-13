@@ -600,9 +600,4 @@ function downloadPDF(type = null) {
   }
 }
 
-document.querySelectorAll(".datasheet-card").forEach((card) => {
-  card.addEventListener("click", function () {
-    const type = this.getAttribute("data-type");
-    downloadPDF(type);
-  });
-});
+
