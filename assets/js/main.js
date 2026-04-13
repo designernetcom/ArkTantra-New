@@ -527,13 +527,14 @@
   // ========================= Header Sticky Js End===================
 })(jQuery);
 
+// pdf download script
+
 let selectedType = "";
 
 function openPopup(type) {
   selectedType = type;
   document.getElementById("popup").style.display = "flex";
 
-  // Auto-select dropdown
   const select = document.getElementById("datasheetSelect");
 
   const map = {
@@ -560,10 +561,7 @@ function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
 
-function downloadPDF() {
-  const select = document.getElementById("datasheetSelect");
-  const selected = select.value;
-
+function downloadPDF(type = null) {
   const basePath = "./assets/pdf/datasheets/";
 
   const pdfMap = {
@@ -583,16 +581,20 @@ function downloadPDF() {
     Password: basePath + "Password-Management-Product-Datasheet-1.pdf",
   };
 
-  const file = pdfMap[type];
+  // 👉 Priority: direct click > popup selection
+  const finalType = type || selectedType;
+
+  const file = pdfMap[finalType];
 
   if (file) {
-    // Create download link
     const link = document.createElement("a");
     link.href = file;
     link.download = "";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+
+    closePopup(); // optional
   } else {
     alert("File not found!");
   }
