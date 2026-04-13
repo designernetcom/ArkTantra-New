@@ -538,14 +538,15 @@ function downloadPDF() {
     "CIAM Datasheet": basePath + "CIAM-Datasheet.pdf",
     "SSO Datasheet": basePath + "SSO-Product-Datasheet.pdf",
     "MFA Datasheet": basePath + "MFA-Product-Datasheet.pdf",
-    "Provisioning Datasheet": basePath + "Provisioning-Product-Datasheet.pdf",
+    "Provisioning Datasheet":
+      basePath + "Provisioning-Product-Datasheet (1).pdf",
     "Access Gateway Datasheet": basePath + "access-gateway-datasheet.pdf",
     "Adaptive MFA Datasheet": basePath + "Adaptive-MFA-Product-Datasheet-1.pdf",
     "PAM Datasheet": basePath + "PAM-Product-Datasheet.pdf",
     "BigCommerce Datasheet": basePath + "Bigcommerce-Product-Datasheet-1.pdf",
     "Oracle SSO Datasheet": basePath + "Oracle-SSO-Product-Datasheet-1.pdf",
-    "Windows MFA Datasheet": basePath + "Windows-MFA-Product-Datasheet.pdf",
-    "TACACS Datasheet": basePath + "TACACS-Product-Datasheet.pdf",
+    "Windows MFA Datasheet": basePath + "Windows-MFA-Product-Datasheet-1.pdf",
+    "TACACS Datasheet": basePath + "TACACS-Product-Datasheet-1 (1).pdf",
     "Partner Program Datasheet":
       basePath + "Partner-Program-Product-Datasheet-1.pdf",
     "Password Management Datasheet":
@@ -554,7 +555,7 @@ function downloadPDF() {
       "/assets/pdf/datasheets/Actionix-Active-Directory-Audit.pdf",
     "self-service": "/assets/pdf/datasheets/Actonix-Self-Service-Datasheet.pdf",
     "ad-audit": "/assets/pdf/datasheets/Actionix-Active-Directory-Audit.pdf",
-    patch: "/assets/pdf/datasheets/Action1-Datasheet.pdf",
+    patch: "/assets/pdf/datasheets/Action1-Datasheet-1.pdf",
     "TechOwl Shield Datasheet": "/assets/pdf/datasheets/Techowl-Datasheet.pdf",
   };
 
