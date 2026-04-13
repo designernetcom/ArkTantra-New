@@ -434,8 +434,9 @@
     <section class="datasheet">
       <div class="container">
         <div class="row">
+          <!-- IAM -->
           <div class="col-md-4">
-            <div class="datasheet-card" onclick="downloadPDF('IAM')">
+            <div class="datasheet-card" data-type="IAM">
               <div class="resources-card">
                 <div
                   class="resources-card-body datasheet-img iam-datasheet-img"
@@ -447,8 +448,9 @@
             </div>
           </div>
 
+          <!-- CIAM -->
           <div class="col-md-4">
-            <div class="datasheet-card" onclick="downloadPDF('CIAM')">
+            <div class="datasheet-card" data-type="CIAM">
               <div class="resources-card">
                 <div
                   class="resources-card-body datasheet-img ciam-datasheet-img"
@@ -460,8 +462,9 @@
             </div>
           </div>
 
+          <!-- SSO -->
           <div class="col-md-4">
-            <div class="datasheet-card" onclick="downloadPDF('SSO')">
+            <div class="datasheet-card" data-type="SSO">
               <div class="resources-card">
                 <div
                   class="resources-card-body datasheet-img sso-datasheet-img"
@@ -473,8 +476,9 @@
             </div>
           </div>
 
+          <!-- MFA -->
           <div class="col-md-4 pt">
-            <div class="datasheet-card" onclick="downloadPDF('MFA')">
+            <div class="datasheet-card" data-type="MFA">
               <div class="resources-card">
                 <div
                   class="resources-card-body datasheet-img mfa-datasheet-img"
@@ -486,8 +490,9 @@
             </div>
           </div>
 
+          <!-- Provisioning -->
           <div class="col-md-4 pt">
-            <div class="datasheet-card" onclick="downloadPDF('Provisioning')">
+            <div class="datasheet-card" data-type="Provisioning">
               <div class="resources-card">
                 <div
                   class="resources-card-body datasheet-img provisioning-datasheet-img"
@@ -499,8 +504,9 @@
             </div>
           </div>
 
+          <!-- Access Gateway -->
           <div class="col-md-4 pt">
-            <div class="datasheet-card" onclick="downloadPDF('Access-Gateway')">
+            <div class="datasheet-card" data-type="Access-Gateway">
               <div class="resources-card">
                 <div
                   class="resources-card-body datasheet-img access-gateway-datasheet-img"
@@ -512,8 +518,9 @@
             </div>
           </div>
 
+          <!-- Adaptive MFA -->
           <div class="col-md-4 pt">
-            <div class="datasheet-card" onclick="downloadPDF('Adaptive-Mfa')">
+            <div class="datasheet-card" data-type="Adaptive-Mfa">
               <div class="resources-card">
                 <div
                   class="resources-card-body datasheet-img adaptive-mfa-datasheet-img"
@@ -525,8 +532,9 @@
             </div>
           </div>
 
+          <!-- PAM -->
           <div class="col-md-4 pt">
-            <div class="datasheet-card" onclick="downloadPDF('PAM')">
+            <div class="datasheet-card" data-type="PAM">
               <div class="resources-card">
                 <div
                   class="resources-card-body datasheet-img pam-datasheet-img"
@@ -538,8 +546,9 @@
             </div>
           </div>
 
+          <!-- BigCommerce -->
           <div class="col-md-4 pt">
-            <div class="datasheet-card" onclick="downloadPDF('Bigcommerce')">
+            <div class="datasheet-card" data-type="Bigcommerce">
               <div class="resources-card">
                 <div
                   class="resources-card-body datasheet-img bigcommerce-datasheet-img"
@@ -551,8 +560,9 @@
             </div>
           </div>
 
+          <!-- Oracle -->
           <div class="col-md-4 pt">
-            <div class="datasheet-card" onclick="downloadPDF('Oracle')">
+            <div class="datasheet-card" data-type="Oracle">
               <div class="resources-card">
                 <div
                   class="resources-card-body datasheet-img oracle-datasheet-img"
@@ -564,8 +574,9 @@
             </div>
           </div>
 
+          <!-- Windows -->
           <div class="col-md-4 pt">
-            <div class="datasheet-card" onclick="downloadPDF('Windows')">
+            <div class="datasheet-card" data-type="Windows">
               <div class="resources-card">
                 <div
                   class="resources-card-body datasheet-img windows-datasheet-img"
@@ -577,8 +588,9 @@
             </div>
           </div>
 
+          <!-- TACACS -->
           <div class="col-md-4 pt">
-            <div class="datasheet-card" onclick="downloadPDF('TACACS')">
+            <div class="datasheet-card" data-type="TACACS">
               <div class="resources-card">
                 <div
                   class="resources-card-body datasheet-img tacacs-datasheet-img"
@@ -590,8 +602,9 @@
             </div>
           </div>
 
+          <!-- Partner -->
           <div class="col-md-4 pt">
-            <div class="datasheet-card" onclick="downloadPDF('Partner')">
+            <div class="datasheet-card" data-type="Partner">
               <div class="resources-card">
                 <div
                   class="resources-card-body datasheet-img partner-datasheet-img"
@@ -603,8 +616,9 @@
             </div>
           </div>
 
+          <!-- Password -->
           <div class="col-md-4 pt">
-            <div class="datasheet-card" onclick="downloadPDF('Password')">
+            <div class="datasheet-card" data-type="Password">
               <div class="resources-card">
                 <div
                   class="resources-card-body datasheet-img password-datasheet-img"
@@ -620,71 +634,41 @@
     </section>
 
     <!-- POPUP FORM -->
-    <div class="popup-overlay" id="popup">
+    <div class="popup-overlay" id="popup" style="display: none">
       <div class="popup-box">
         <span class="close-btn" onclick="closePopup()">×</span>
 
-        <form class="form-submit">
+        <form id="downloadForm">
           <div class="mb-3">
             <label>Name *</label>
-            <input type="text" class="form-control" required />
+            <input type="text" id="name" class="form-control" required />
           </div>
 
           <div class="mb-3">
             <label>Work Email *</label>
-            <input type="email" class="form-control" required />
+            <input type="email" id="email" class="form-control" required />
           </div>
 
           <div class="mb-3">
             <select id="datasheetSelect" class="form-control">
-              <option value="IAM Datasheet">IAM Datasheet</option>
-              <option value="CIAM Datasheet">CIAM Datasheet</option>
-              <option value="SSO Datasheet">SSO Datasheet</option>
-              <option value="MFA Datasheet">MFA Datasheet</option>
-              <option value="Provisioning Datasheet">
-                Provisioning Datasheet
-              </option>
-              <option value="Access Gateway Datasheet">
-                Access Gateway Datasheet
-              </option>
-              <option value="Adaptive MFA Datasheet">
-                Adaptive MFA Datasheet
-              </option>
-              <option value="PAM Datasheet">PAM Datasheet</option>
-              <option value="BigCommerce Datasheet">
-                BigCommerce Datasheet
-              </option>
-              <option value="Oracle SSO Datasheet">Oracle SSO Datasheet</option>
-              <option value="Windows MFA Datasheet">
-                Windows MFA Datasheet
-              </option>
-              <option value="TACACS Datasheet">TACACS Datasheet</option>
-              <option value="Partner Program Datasheet">
-                Partner Program Datasheet
-              </option>
-              <option value="Password Management Datasheet">
-                Password Management Datasheet
-              </option>
+              <option value="IAM">IAM Datasheet</option>
+              <option value="CIAM">CIAM Datasheet</option>
+              <option value="SSO">SSO Datasheet</option>
+              <option value="MFA">MFA Datasheet</option>
+              <option value="Provisioning">Provisioning Datasheet</option>
+              <option value="Access-Gateway">Access Gateway Datasheet</option>
+              <option value="Adaptive-Mfa">Adaptive MFA Datasheet</option>
+              <option value="PAM">PAM Datasheet</option>
+              <option value="Bigcommerce">BigCommerce Datasheet</option>
+              <option value="Oracle">Oracle SSO Datasheet</option>
+              <option value="Windows">Windows MFA Datasheet</option>
+              <option value="TACACS">TACACS Datasheet</option>
+              <option value="Partner">Partner Program Datasheet</option>
+              <option value="Password">Password Management Datasheet</option>
             </select>
           </div>
 
-          <!-- reCAPTCHA -->
-          <div class="mb-3">
-            <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
-          </div>
-          <button
-            type="button"
-            onclick="downloadPDF()"
-            style="background: #f69a17"
-            class="btn btn-primary w-100"
-          >
-            Download
-          </button>
-
-          <p class="mt-2 small">
-            <strong>Note:</strong> Please allow popups and redirects before
-            downloading.
-          </p>
+          <button type="submit" class="btn btn-primary w-100">Download</button>
         </form>
       </div>
     </div>
