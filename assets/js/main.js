@@ -538,7 +538,7 @@ function downloadPDF() {
     "CIAM Datasheet": basePath + "CIAM-Datasheet.pdf",
     "SSO Datasheet": basePath + "SSO-Product-Datasheet.pdf",
     "MFA Datasheet": basePath + "MFA-Product-Datasheet.pdf",
-    "Provisioning Datasheet": basePath + "Provisioning-Product-Datasheet-1.pdf",
+    "Provisioning Datasheet": basePath + "Provisioning-Product-Datasheet.pdf",
     "Access Gateway Datasheet": basePath + "access-gateway-datasheet.pdf",
     "Adaptive MFA Datasheet": basePath + "Adaptive-MFA-Product-Datasheet-1.pdf",
     "PAM Datasheet": basePath + "PAM-Product-Datasheet.pdf",

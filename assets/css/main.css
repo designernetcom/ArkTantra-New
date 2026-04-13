@@ -8323,3 +8323,7 @@ h2 {
     padding-left: 20px;
   }
 }
+.breadcrumb h1 {
+  color: white;
+  font-size: 35px;
+}
