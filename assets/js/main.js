@@ -567,29 +567,32 @@ function downloadPDF() {
   const basePath = "./assets/pdf/datasheets/";
 
   const pdfMap = {
-    "IAM Datasheet": basePath + "IAM-Product-datasheet.pdf",
-    "CIAM Datasheet": basePath + "CIAM-Datasheet.pdf",
-    "SSO Datasheet": basePath + "SSO-Product-Datasheet.pdf",
-    "MFA Datasheet": basePath + "MFA-Product-Datasheet.pdf",
-    "Provisioning Datasheet": basePath + "Provisioning-Product-Datasheet-1.pdf",
-    "Access Gateway Datasheet": basePath + "access-gateway-datasheet.pdf",
-    "Adaptive MFA Datasheet": basePath + "Adaptive-MFA-Product-Datasheet-1.pdf",
-    "PAM Datasheet": basePath + "PAM-Product-Datasheet.pdf",
-    "BigCommerce Datasheet": basePath + "BigCommerce-Product-Datasheet-1.pdf",
-    "Oracle SSO Datasheet": basePath + "Oracle-SSO-Product-Datasheet-1.pdf",
-    "Windows MFA Datasheet": basePath + "Windows-MFA-Product-Datasheet-1.pdf",
-    "TACACS Datasheet": basePath + "TACACS-Product-Datasheet-1.pdf",
-    "Partner Program Datasheet":
-      basePath + "Partner-Program-Product-Datasheet-1.pdf",
-    "Password Management Datasheet":
-      basePath + "Password-Management-Product-Datasheet-1.pdf",
+    IAM: basePath + "IAM-Product-datasheet.pdf",
+    CIAM: basePath + "CIAM-Datasheet.pdf",
+    SSO: basePath + "SSO-Product-Datasheet.pdf",
+    MFA: basePath + "MFA-Product-Datasheet.pdf",
+    Provisioning: basePath + "Provisioning-Product-Datasheet-1.pdf",
+    "Access-Gateway": basePath + "access-gateway-datasheet.pdf",
+    "Adaptive-Mfa": basePath + "Adaptive-MFA-Product-Datasheet-1.pdf",
+    PAM: basePath + "PAM-Product-Datasheet.pdf",
+    Bigcommerce: basePath + "BigCommerce-Product-Datasheet-1.pdf",
+    Oracle: basePath + "Oracle-SSO-Product-Datasheet-1.pdf",
+    Windows: basePath + "Windows-MFA-Product-Datasheet-1.pdf",
+    TACACS: basePath + "TACACS-Product-Datasheet-1.pdf",
+    Partner: basePath + "Partner-Program-Product-Datasheet-1.pdf",
+    Password: basePath + "Password-Management-Product-Datasheet-1.pdf",
   };
 
-  const file = pdfMap[selected];
+  const file = pdfMap[type];
 
   if (file) {
-    console.log("Opening:", file);
-    window.open(file, "_blank");
+    // Create download link
+    const link = document.createElement("a");
+    link.href = file;
+    link.download = "";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   } else {
     alert("File not found!");
   }
