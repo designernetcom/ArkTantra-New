@@ -7941,6 +7941,7 @@ h2 {
   background:
     linear-gradient(#000000d6, rgb(62 113 182 / 72%)),
     url(../images/thumbs/banner-two-thumb.png) no-repeat center center / cover;
+  padding-top: 75px;
 }
 .form-div form input {
   border: 1px solid #3855a5 !important;
@@ -8169,6 +8170,30 @@ h2 {
 .patch-datasheet-img {
   background-image: url(../images/ark-img/datasheet/action1.png);
 }
+.techowl-threat-datasheet-img {
+  background-image: url(../images/ark-img/datasheet/techowl-threat.png);
+}
+.techowl-vendor-shield-datasheet-img {
+  background-image: url(../images/ark-img/datasheet/techowl-vendor-shield.png);
+}
+.techowl-cloud-shield-datasheet-img {
+  background-image: url(../images/ark-img/datasheet/techowl-cloud.png);
+}
+.techowl-dmarc-shield-datasheet-img {
+  background-image: url(../images/ark-img/datasheet/techowl-dmarc-shield.png);
+}
+.techowl-phish-shield-datasheet-img {
+  background-image: url(../images/ark-img/datasheet/techowl-phish-shield.png);
+}
+.techowl-threat-pulse-shield-datasheet-img {
+  background-image: url(../images/ark-img/datasheet/techowl-threat-pulse.png);
+}
+.file-server-audit-datasheet-img {
+  background-image: url(../images/ark-img/datasheet/actionix-file-server-audit.png);
+}
+.M365-datasheet-img {
+  background-image: url(../images/ark-img/datasheet/actionix-m365.png);
+}
 .datasheet .pt {
   padding-top: 40px;
 }
@@ -8209,9 +8234,7 @@ h2 {
 }
 /* Even Page Css */
 .coming-soon {
-  background: #ffffff;
-  padding: 100px 20px;
-  text-align: left;
+  padding: 50px 0;
 }
 
 .coming-soon h1 {
@@ -8227,41 +8250,8 @@ h2 {
   font-weight: 600;
   color: #111;
   border-bottom: 3px solid #f69a17;
-  display: inline-block;
+
   padding-bottom: 5px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .coming-soon {
-    padding: 60px 15px;
-  }
-
-  .coming-soon h1 {
-    font-size: 42px;
-  }
-
-  .event-title {
-    font-size: 18px;
-  }
-}
-.coming-soon {
-  background: #fff url("pattern.svg") no-repeat top right;
-  background-size: 200px;
-}
-.coming-soon h1 {
-  animation: fadeInUp 1s ease;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* BANNER BASE */
@@ -8326,4 +8316,10 @@ h2 {
 .breadcrumb h1 {
   color: white;
   font-size: 35px;
+}
+.copyright {
+  margin-top: 30px;
+}
+.footer h4 {
+  font-size: 23px;
 }

@@ -550,11 +550,22 @@ function downloadPDF() {
       basePath + "Partner-Program-Product-Datasheet-1.pdf",
     "Password Management Datasheet":
       basePath + "Password-Management-Product-Datasheet-1.pdf",
-    "Active Directory Audit": basePath + "Actionix-Active-Directory-Audit.pdf",
-    "self-service": basePath + "Actonix-Self-Service-Datasheet.pdf",
-    "ad-audit": basePath + "Actionix-Active-Directory-Audit.pdf",
-    patch: basePath + "Action1-Datasheet-1.pdf",
+
     "TechOwl Shield Datasheet": basePath + "Techowl-Datasheet.pdf",
+    "TechOwl Threat Lab Datasheet": basePath + "TechOwl-Threat-Lab.pdf",
+    "TechOwl Vendor Shield Datasheet": basePath + "TechOwl-Vendor-Shield.pdf",
+    "TechOwl Cloud Shield Datasheet": basePath + "TechOwl-Cloud-Shield.pdf",
+    "TechOwl DMARC Shield Datasheet": basePath + "Techowl-Dmarc-Shield.pdf",
+    "TechOwl Phish Shield Datasheet": basePath + "TechOwl-Phish-Shield.pdf",
+    "TechOwl Threat Pulse Datasheet": basePath + "TechOwl-Threat-Pulse.pdf",
+
+    "Self Service Datasheet": basePath + "Actonix-Self-Service-Datasheet.pdf",
+    "Active Directory Audit": basePath + "Actionix-Active-Directory-Audit.pdf",
+    "File Server Audit Datasheet": basePath + "File-server-audit.pdf",
+    "M365 Datasheet": basePath + "M365.pdf",
+
+    "Patch Management Datasheet":
+      basePath + "Action1-Patch-Management-Datasheet.pdf",
   };
 
   const file = pdfMap[selected];
