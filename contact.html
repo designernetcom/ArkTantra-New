@@ -391,7 +391,17 @@
             <div class="form-div shadow">
               <div class="blur-bg-white tw-p-60-px tw-rounded-lg">
                 <h2 class="splitText tw-mb-10">Get In Touch!</h2>
-                <form action="#" class="form-submit">
+                <form
+                  class="form-submit"
+                  id="contact-form"
+                  action=""
+                  method="POST"
+                >
+                  <input
+                    type="hidden"
+                    name="recaptcha_token"
+                    id="recaptcha_token"
+                  />
                   <div class="row gy-4">
                     <div class="col-sm-6">
                       <div class="">
@@ -403,6 +413,7 @@
                           id="name"
                           class="bg-white border border-white focus-border-main-600 focus-outline-0 tw-px-6 tw-py-3 tw-h-13 tw-rounded-md w-100"
                           placeholder="First Name"
+                          name="fname"
                           required
                         />
                       </div>
@@ -413,10 +424,11 @@
                           >Your email*</label
                         > -->
                         <input
-                          type="email"
-                          id="email"
+                          type="text"
+                          id="name"
                           class="bg-white border border-white focus-border-main-600 focus-outline-0 tw-px-6 tw-py-3 tw-h-13 tw-rounded-md w-100"
-                          placeholder="E-mail"
+                          placeholder="Last Name"
+                          name="lname"
                           required
                         />
                       </div>
@@ -431,17 +443,28 @@
                           id="tel"
                           class="bg-white border border-white focus-border-main-600 focus-outline-0 tw-px-6 tw-py-3 tw-h-13 tw-rounded-md w-100"
                           placeholder="Phone"
+                          name="Phone"
                           required
                         />
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="">
-                        <!-- <label
-                          for="department"
-                          class="tw-text-sm tw-mb-2 d-block"
-                          >Your Subject*</label
+                        <!-- <label for="tel" class="tw-text-sm tw-mb-2 d-block"
+                          >Your Phone*</label
                         > -->
+                        <input
+                          type="text"
+                          id="email"
+                          class="bg-white border border-white focus-border-main-600 focus-outline-0 tw-px-6 tw-py-3 tw-h-13 tw-rounded-md w-100"
+                          placeholder="E-mail"
+                          name="Email"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <!-- <div class="col-sm-6">
+                      <div class="">
                         <select
                           class="bg-white border border-white focus-border-main-600 focus-outline-0 tw-px-6 tw-py-1 tw-rounded-md tw-h-13 w-100 form-select shadow-none"
                           id="department"
@@ -457,7 +480,7 @@
                           <option value="Digital Agency">Digital Agency</option>
                         </select>
                       </div>
-                    </div>
+                    </div> -->
                     <div class="col-sm-12">
                       <div class="">
                         <!-- <label for="service" class="tw-text-sm tw-mb-2 d-block"
@@ -482,6 +505,7 @@
                     <div class="col-12 d-inline-block">
                       <button
                         type="submit"
+                        id="btn_submit"
                         class="btn btn-main hover-style-one button--stroke active-scale-094 tw-duration-100 d-inline-flex align-items-center justify-content-center group active--translate-y-2 tw-py-105 tw-px-105 rounded-pill hover-move-effect"
                         data-block="button"
                       >
@@ -542,48 +566,22 @@
                   ArkTantra delivers trusted cybersecurity solutions through
                   strong partnerships and efficient distribution.
                 </p>
-                <ul class="d-flex align-items-center tw-gap-305 tw-mt-9">
-                  <li>
-                    <a
-                      href=""
-                      class="text-white tw-w-11 tw-h-11 bg-white-13 rounded-circle d-flex justify-content-center align-items-center tw-text-lg tw-leading-none hover-bg-main-two-600 hover-text-white active-scale-09"
-                      ><i class="ph-bold ph-facebook-logo"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href=""
-                      class="text-white tw-w-11 tw-h-11 bg-white-13 rounded-circle d-flex justify-content-center align-items-center tw-text-lg tw-leading-none hover-bg-main-two-600 hover-text-white active-scale-09"
-                    >
-                      <i class="ph-bold ph-twitter-logo"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href=""
-                      class="text-white tw-w-11 tw-h-11 bg-white-13 rounded-circle d-flex justify-content-center align-items-center tw-text-lg tw-leading-none hover-bg-main-two-600 hover-text-white active-scale-09"
-                      ><i class="ph-bold ph-instagram-logo"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.pinterest.com/"
-                      class="text-white tw-w-11 tw-h-11 bg-white-13 rounded-circle d-flex justify-content-center align-items-center tw-text-lg tw-leading-none hover-bg-main-two-600 hover-text-white active-scale-09"
-                      ><i class="ph-bold ph-pinterest-logo"></i
-                    ></a>
-                  </li>
-                </ul>
               </div>
             </div>
 
-            <div class="col-lg-3 col-sm-6 col-xs-6 aos-init aos-animate">
+            <div class="col-lg-4 col-sm-6 col-xs-6 aos-init aos-animate">
               <div class="">
                 <h4 class="cursor-big fw-medium text--white tw-mb-8">
                   Address
                 </h4>
+
                 <p class="text-white fw-normal">
-                  Office No. D-208, Gini Bellina Commercial Premises Porwal
-                  Road, Maharashtra - 411047
+                  <a
+                    class="text-white"
+                    href="https://maps.app.goo.gl/RgdaAuWJ5NhBoGVs9"
+                    >Office No. D-208, Gini Bellina Commercial Premises Porwal
+                    Road, Maharashtra - 411047</a
+                  >
                 </p>
                 <br />
                 <h4
@@ -625,14 +623,14 @@
                 <div class="d-flex flex-column tw-gap-6">
                   <div class="google-iframe">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.2906004027227!2d73.90748927465418!3d18.605994566560323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c6c04b708739%3A0x401b141a8b6c0bc!2sPorwal%20Rd%2C%20Lohegaon%2C%20Pune%2C%20Maharashtra%20411047!5e0!3m2!1sen!2sin!4v1775213519894!5m2!1sen!2sin"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.4130750970894!2d73.90984842465397!3d18.600481316729553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c6c082702c59%3A0xd24a37a7782b987a!2sGini%20Bellina%2C%20B2%2C%20B-Wing%2C%20Kutwal%20Colony%2C%20Lohegaon%2C%20Pune%2C%20Maharashtra%20411047!5e0!3m2!1sen!2sin!4v1776495376163!5m2!1sen!2sin"
                       width="100%"
-                      height="290px"
+                      height="250"
                       style="border: 0"
                       allowfullscreen=""
                       loading="lazy"
-                    >
-                    </iframe>
+                      referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
                   </div>
                 </div>
               </div>
@@ -666,6 +664,70 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdjGoosAAAAAN7Cnnj4VK_1NZYNnVep2bXlQiLl"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#contact-form").on("submit", function (e) {
+          e.preventDefault();
+
+          $("#btn_submit").prop("disabled", true).text("Sending...");
+
+          grecaptcha
+            .execute("6LdjGoosAAAAAN7Cnnj4VK_1NZYNnVep2bXlQiLl", {
+              action: "contact_form",
+            })
+            .then(function (token) {
+              let formData = new FormData(
+                document.getElementById("contact-form"),
+              );
+
+              formData.append("recaptcha_token", token);
+
+              $.ajax({
+                url: "contact_valid.php",
+                type: "POST",
+                data: formData,
+                contentType: false,
+                processData: false,
+
+                success: function (response) {
+                  $("#btn_submit").prop("disabled", false).text("Send Message");
+
+                  if (response.trim() === "sent") {
+                    Swal.fire({
+                      icon: "success",
+                      title: "Message Sent",
+                      text: "Thank you! We will contact you shortly.",
+                    });
+
+                    $("#contact-form")[0].reset();
+                  } else {
+                    Swal.fire({
+                      icon: "error",
+                      title: "Error",
+                      text: response,
+                    });
+                  }
+                },
+
+                error: function () {
+                  $("#btn_submit").prop("disabled", false).text("Send Message");
+
+                  Swal.fire({
+                    icon: "error",
+                    title: "Oops!",
+                    text: "Something went wrong. Please try again.",
+                  });
+                },
+              });
+            });
+        });
+      });
+    </script>
 
     <!-- Jquery js -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
