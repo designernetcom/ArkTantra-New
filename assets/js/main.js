@@ -534,6 +534,8 @@ function downloadPDF() {
   const basePath = "./assets/pdf/datasheets/";
 
   const pdfMap = {
+    // Miniorange datasheets
+
     "IAM Datasheet": basePath + "IAM-Product-datasheet.pdf",
     "CIAM Datasheet": basePath + "CIAM-Datasheet.pdf",
     "SSO Datasheet": basePath + "SSO-Product-Datasheet.pdf",
@@ -546,10 +548,16 @@ function downloadPDF() {
     "Oracle SSO Datasheet": basePath + "Oracle-SSO-Product-Datasheet-1.pdf",
     "Windows MFA Datasheet": basePath + "Windows-MFA-Product-Datasheet-1.pdf",
     "TACACS Datasheet": basePath + "TACACS-Product-Datasheet-1.pdf",
-    "Partner Program Datasheet":
-      basePath + "Partner-Program-Product-Datasheet-1.pdf",
+    // "Partner Program Datasheet":
+    //   basePath + "Partner-Program-Product-Datasheet-1.pdf",
     "Password Management Datasheet":
       basePath + "Password-Management-Product-Datasheet-1.pdf",
+    "Data Privacy & Protection Datasheet":
+      basePath + "Data-Privacy-&-Protection-Datasheet.pdf",
+    "MDM Datasheet": basePath + "mdm-datasheet.pdf",
+    "DLP Datasheet": basePath + "DLP-Datasheet.pdf",
+
+    // Techowl Datasheets
 
     "TechOwl Shield Datasheet": basePath + "Techowl-Datasheet.pdf",
     "TechOwl Threat Lab Datasheet": basePath + "TechOwl-Threat-Lab.pdf",
@@ -559,10 +567,14 @@ function downloadPDF() {
     "TechOwl Phish Shield Datasheet": basePath + "TechOwl-Phish-Shield.pdf",
     "TechOwl Threat Pulse Datasheet": basePath + "TechOwl-Threat-Pulse.pdf",
 
+    // ActoniX datasheets
+
     "Self Service Datasheet": basePath + "Actonix-Self-Service-Datasheet.pdf",
     "Active Directory Audit": basePath + "Actionix-Active-Directory-Audit.pdf",
     "File Server Audit Datasheet": basePath + "File-server-audit.pdf",
     "M365 Datasheet": basePath + "M365.pdf",
+
+    // Action1 Datasheets
 
     "Patch Management Datasheet":
       basePath + "Action1-Patch-Management-Datasheet.pdf",

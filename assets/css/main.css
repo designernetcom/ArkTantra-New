@@ -8114,7 +8114,7 @@ h2 {
   margin: 0 5px;
   text-decoration: none;
   padding: 0.5em 0;
-  font-size: 22px;
+  font-size: 20px;
 }
 .iam-datasheet-img {
   background-image: url(../images/ark-img/datasheet/iam-datasheet.webp);
@@ -8189,10 +8189,19 @@ h2 {
   background-image: url(../images/ark-img/datasheet/techowl-threat-pulse.png);
 }
 .file-server-audit-datasheet-img {
-  background-image: url(../images/ark-img/datasheet/actionix-file-server-audit.png);
+  background-image: url(../images/ark-img/datasheet/Actonix-file-server-audit.png);
 }
 .M365-datasheet-img {
-  background-image: url(../images/ark-img/datasheet/actionix-m365.png);
+  background-image: url(../images/ark-img/datasheet/actonix-m365.png);
+}
+.data-privacy-datasheet-img {
+  background-image: url(../images/ark-img/datasheet/data-privacy-protection.png);
+}
+.mdm-datasheet-img {
+  background-image: url(../images/ark-img/datasheet/mdm.png);
+}
+.dlp-datasheet-img {
+  background-image: url(../images/ark-img/datasheet/dlp.png);
 }
 .datasheet .pt {
   padding-top: 40px;
